@@ -11,9 +11,12 @@ namespace BookListRazor.Model
     public class ApplicationDbContext : DbContext
     {
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opttions) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { 
+
         }
+
+        public DbSet<Book> Book { get; set; }
 
     }
 }
